@@ -36,7 +36,7 @@ body{
   font-size:.72rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
   margin-left:1.7rem;color:var(--muted);
 }
-.site-header nav a:hover{color:var(--ink)}
+.site-header nav a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:5px}
 
 /* ---------- article grid (the teak skeleton) ---------- */
 article{

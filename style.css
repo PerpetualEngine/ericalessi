@@ -1,0 +1,127 @@
+:root{
+  --paper:#FAF8F4;
+  --ink:#151312;
+  --muted:#8a857d;
+  --hair:#e3ded5;
+}
+*{box-sizing:border-box}
+html{font-size:17px}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"EB Garamond",Georgia,serif;
+  line-height:1.65;
+}
+.wrap{max-width:660px;margin:0 auto;padding:0 22px}
+
+/* top nav */
+nav{padding:26px 0 0}
+nav .wrap{display:flex;justify-content:space-between;align-items:baseline}
+nav a{color:var(--ink);text-decoration:none}
+nav .home{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05rem;letter-spacing:.04em}
+nav .links a{margin-left:22px;font-size:.85rem;color:var(--muted)}
+nav .links a:hover{color:var(--ink)}
+
+/* chapter header, teak.fi style */
+.series{
+  margin-top:78px;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.byline{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:1.25rem;
+  margin-top:34px;
+}
+h1{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:600;
+  font-size:2.9rem;
+  line-height:1.12;
+  margin:.35em 0 .4em;
+  letter-spacing:-.01em;
+}
+.lede{font-size:1.12rem;color:var(--muted);margin-bottom:2.6em}
+
+h2{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:600;
+  font-size:1.55rem;
+  margin:2.4em 0 .5em;
+}
+p{margin:0 0 1.15em}
+a{color:var(--ink)}
+
+blockquote{
+  margin:1.6em 0;
+  padding-left:1.4em;
+  border-left:2px solid var(--hair);
+  font-style:italic;
+  color:#3d3936;
+}
+blockquote p{margin-bottom:.6em}
+
+.note{font-size:.85rem;color:var(--muted)}
+
+/* entry list on the home page */
+.entry-list{list-style:none;padding:0;margin:1.2em 0 0}
+.entry-list li{
+  border-top:1px solid var(--hair);
+  padding:1.15em 0;
+}
+.entry-list .num{
+  font-size:.72rem;letter-spacing:.24em;color:var(--muted);
+  display:block;margin-bottom:.25em;
+}
+.entry-list a{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:1.45rem;text-decoration:none;
+}
+.entry-list a:hover{text-decoration:underline}
+
+/* subscribe band */
+.subscribe{
+  margin:4.5em 0 0;
+  padding:2.4em 0 2.6em;
+  border-top:1px solid var(--hair);
+  text-align:center;
+}
+.subscribe h2{margin-top:0}
+.subscribe p{color:var(--muted);max-width:460px;margin:0 auto 1.4em}
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:var(--paper);
+  text-decoration:none;
+  padding:.75em 1.9em;
+  font-size:.9rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.btn:hover{opacity:.85}
+
+/* prev / next */
+.chapter-nav{
+  display:flex;justify-content:space-between;
+  margin:4em 0 0;padding-top:1.4em;
+  border-top:1px solid var(--hair);
+  font-size:.9rem;
+}
+.chapter-nav a{text-decoration:none;color:var(--muted)}
+.chapter-nav a:hover{color:var(--ink)}
+
+footer{
+  margin-top:5em;
+  padding:2.2em 0 3.4em;
+  font-size:.8rem;
+  color:var(--muted);
+}
+footer .wrap{border-top:1px solid var(--hair);padding-top:2em}
+
+@media (max-width:520px){
+  h1{font-size:2.15rem}
+  html{font-size:16px}
+}

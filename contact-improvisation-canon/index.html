@@ -208,7 +208,13 @@ details.shelf.hidden{display:none}
   padding:.85em 1.9em;
   border-radius:6px;
 }
+.btn:visited{color:var(--btn-ink)}
 .btn:hover{filter:brightness(.95)}
+.subscribe-bio{display:flex;gap:1.6rem;align-items:flex-start;margin-bottom:1.5em}
+.bio-photo{width:110px;height:110px;object-fit:cover;flex-shrink:0}
+.subscribe-bio p{margin:0 0 .8em}
+.subscribe-bio .bio-name{color:var(--ink);font-weight:600}
+@media (max-width:600px){.subscribe-bio{flex-direction:column}}
 .site-footer{
   margin-top:5rem;
   padding:1.8rem 4vw 3rem;
@@ -236,7 +242,7 @@ details.shelf.hidden{display:none}
 
 <article>
   <div class="chapter-tag"><span class="accent">The Canon</span> &middot; Contact Improvisation</div>
-  <div class="article-author">Eric Alessi</div>
+  <div class="article-author">Curated by Eric Alessi</div>
   <h1 class="article-title">The Contact Improvisation Canon</h1>
   <p class="carousel-caption" style="margin:0 0 1.6rem">96 works on 8 shelves &middot; free and paid &middot; updated September 2026</p>
 
@@ -899,7 +905,13 @@ details.shelf.hidden{display:none}
 
 <div class="subscribe">
     <h2>Read along</h2>
-    <p>One email a week, one minute to read. The five things guiding my practice: a moment from the room, a passage from the dance literature, something worth watching, one thing to practice, and a question to carry.</p>
+    <div class="subscribe-bio">
+      <img class="bio-photo" src="../images/eric-alessi.jpg" alt="Eric Alessi">
+      <div>
+        <p><span class="bio-name">Eric Alessi.</span> Jumped on the CI wagon in 2016. I live and teach Contact Improvisation on Koh Phangan, Thailand, and internationally.</p>
+        <p>Each week I write the Practice Journal: five things guiding my practice, from the dance literature to the dance floor. One email a week, one minute to read.</p>
+      </div>
+    </div>
     <a class="btn" href="https://perpetual-engine.kit.com/47f9180ef6">Join the Journal</a>
   </div>
 </article>

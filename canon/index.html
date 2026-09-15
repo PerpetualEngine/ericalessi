@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Contact Improvisation Canon — Eric Alessi</title>
+<link rel="canonical" href="https://ericalessi.com/canon/">
+<meta name="description" content="The Contact Improvisation Canon: a directory of the form's essential texts and films, annotated. Paxton's own words, the gravity school, attention, consent, jams and history. Every entry links to a legal source.">
+<style>
+/* disco.teak.fi article skeleton, skinned to Eric's Kit branding:
+   white ground, Inter for every role, warm grays, lime button. */
+:root{
+  --bg:#FFFFFF;
+  --bg-sec:#F4F4F2;
+  --ink:#202020;
+  --muted:#6f6f6c;
+  --hair:#E6E6E3;
+  --lime:#C9F57E;
+  --btn-ink:#2B2521;
+  --sans:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Linux Libertine",Georgia,"Times New Roman",serif;
+  --grid:4vw 1fr 1fr minmax(30ch,920px) 1fr 1fr 4vw;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:14px;
+  line-height:1.6;
+}
+.site-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.2rem 4vw;
+}
+.site-header a{color:var(--ink);text-decoration:none}
+.site-header .site-name{
+  font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+}
+.site-header nav a{
+  font-size:.72rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+  margin-left:1.7rem;color:var(--muted);
+}
+.site-header nav a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:5px}
+article{
+  display:grid;
+  grid-template-columns:var(--grid);
+  column-gap:1rem;
+}
+article > *{grid-column:4}
+article > .chapter-tag,
+article > .article-author,
+article > h1.article-title{grid-column:3/6}
+.chapter-tag{
+  font-size:.76rem;font-weight:400;
+  letter-spacing:.26em;text-transform:uppercase;
+  color:var(--muted);
+  margin:4.5rem 0 3rem;
+}
+.chapter-tag .accent{color:var(--ink)}
+.article-author{
+  font-size:1rem;line-height:1.5;color:var(--muted);
+  margin:0;
+}
+h1.article-title{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:2rem;
+  line-height:1.2;
+  letter-spacing:-.015em;
+  text-wrap:balance;
+  margin:.2em 0 1.6em;
+}
+h2{
+  font-weight:600;
+  font-size:1.2rem;line-height:1.3;
+  margin:2.6em 0 .6em;
+}
+.shelf-num{
+  display:block;
+  font-size:.7rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.5rem;
+}
+p{margin:0 0 1.05em}
+a{color:#3366cc}
+a:visited{color:#795cb2}
+a:hover{text-decoration:underline}
+article blockquote{
+  grid-column:4;
+  margin:1.5em 0;
+  padding-left:1.35em;
+  border-left:2px solid var(--lime);
+  color:#3a3a38;
+}
+blockquote p{margin-bottom:.6em}
+/* reading-room entries */
+.entry{border-top:1px solid var(--hair);padding:1.5rem 0 .4rem}
+.entry h3{
+  font-weight:700;font-size:14px;line-height:1.5;margin:0 0 .35em;
+}
+.entry h3 .meta{font-weight:400;color:var(--muted)}
+.entry p{font-size:.97rem}
+.bestfor{
+  font-size:.85rem;color:var(--muted);
+}
+.bestfor b{font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+.lang-tag{
+  display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--btn-ink);background:var(--lime);border-radius:4px;
+  padding:.15em .55em;vertical-align:.12em;margin-left:.5em;
+}
+.cost-tag{
+  display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--hair);border-radius:4px;
+  padding:.12em .5em;vertical-align:.12em;margin-left:.5em;
+}
+.cost-tag.paid{color:var(--btn-ink);border-color:var(--btn-ink)}
+.filter-bar{margin:0 0 2.2rem}
+.filter-bar span{
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  margin-right:1rem;
+}
+.filter-bar button{
+  font-family:var(--sans);font-size:.78rem;font-weight:600;
+  background:none;border:1px solid var(--hair);border-radius:6px;
+  color:var(--muted);padding:.45em 1.1em;margin-right:.5rem;cursor:pointer;
+}
+.filter-bar button.on{background:var(--lime);color:var(--btn-ink);border-color:var(--lime)}
+.entry.hidden{display:none}
+details.entry summary{cursor:pointer;list-style:none;position:relative;padding-right:2rem}
+details.entry summary::-webkit-details-marker{display:none}
+details.entry summary::after{
+  content:"+";position:absolute;right:.2rem;top:0;
+  font-size:1.1rem;font-weight:400;color:var(--muted);
+}
+details.entry[open] summary::after{content:"\2212"}
+details.entry summary:hover h3{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:4px}
+details.entry summary h3{display:inline}
+details.shelf{
+  border-radius:0;margin:0 0 1rem;
+  background:var(--tint,var(--bg-sec));
+  overflow:hidden;
+}
+#shelf1{--tint:#EFEEEA}
+#shelf2{--tint:#EBEEF3}
+#shelf3{--tint:#EDF0E7}
+#shelf4{--tint:#F4EAE5}
+#shelf5{--tint:#F5EFE2}
+#shelf6{--tint:#F1ECE8}
+#shelf7{--tint:#EFECF2}
+details.shelf > summary{
+  cursor:pointer;list-style:none;position:relative;
+  display:grid;grid-template-columns:1fr 150px;gap:1.4rem;align-items:center;
+  padding:1.5rem 1.7rem;
+}
+.shelf-art{
+  width:150px;height:96px;object-fit:cover;border-radius:0;display:block;
+}
+details.shelf > summary::-webkit-details-marker{display:none}
+details.shelf > summary::after{
+  content:"+";position:absolute;right:1.1rem;top:1.15rem;
+  font-size:1.5rem;font-weight:400;color:var(--muted);
+}
+details.shelf[open] > summary::after{content:"\2212"}
+.shelf-title{
+  display:block;font-family:var(--serif);font-size:1.5rem;font-weight:400;line-height:1.25;margin:.35rem 0 .3rem;
+}
+details.shelf > summary:hover .shelf-title{
+  text-decoration:underline;text-decoration-color:var(--lime);
+  text-decoration-thickness:3px;text-underline-offset:5px;
+}
+.shelf-desc{display:block;font-size:.9rem;color:var(--muted);max-width:56ch}
+details.shelf .shelf-num{margin-bottom:0}
+.shelf-body{background:var(--bg);padding:.2rem 1.7rem 1.2rem}
+.shelf-body .entry:first-of-type{border-top:none}
+.shelf-body .entry > p, .shelf-body .entry blockquote{
+  font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;line-height:1.6;
+}
+.shelf-body .entry p.bestfor{font-family:var(--sans);font-size:.85rem}
+details.shelf.hidden{display:none}
+.draft-note{
+  background:var(--bg-sec);border-radius:6px;
+  padding:1.3rem 1.5rem;margin:0 0 2.5rem;
+  font-size:.9rem;color:var(--muted);
+}
+.toc-jump{list-style:none;padding:0;margin:.2rem 0 2rem;font-size:.9rem}
+.toc-jump li{padding:.32rem 0;border-top:1px solid var(--hair)}
+.toc-jump a{text-decoration:none}
+.toc-jump a:hover{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px}
+.toc-jump .n{color:var(--muted);display:inline-block;min-width:1.6em}
+.subscribe{
+  background:var(--bg-sec);
+  padding:2.2rem 2rem 2.5rem;
+  margin:4rem 0 0;
+  border-radius:6px;
+}
+.subscribe h2{margin:0 0 .5em}
+.subscribe p{color:var(--muted);margin-bottom:1.5em}
+.btn{
+  display:inline-block;
+  font-size:.85rem;font-weight:600;letter-spacing:.02em;
+  background:var(--lime);color:var(--btn-ink);
+  text-decoration:none;
+  padding:.85em 1.9em;
+  border-radius:6px;
+}
+.btn:hover{filter:brightness(.95)}
+.site-footer{
+  margin-top:5rem;
+  padding:1.8rem 4vw 3rem;
+  font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+}
+@media (max-width:47.9em){
+  article{display:block;padding:0 5.5vw}
+  h1.article-title{font-size:1.9rem}
+  body{font-size:16px}
+  .site-header nav a{margin-left:1rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="site-name" href="https://ericalessi.com">Eric Alessi</a>
+  <nav>
+    <a href="./">Canon</a>
+    <a href="https://ericalessi.com/#classes">Classes</a>
+    <a href="https://perpetual-engine.kit.com/47f9180ef6">Subscribe</a>
+  </nav>
+</header>
+
+<article>
+  <div class="chapter-tag"><span class="accent">The Canon</span> &middot; Contact Improvisation</div>
+  <div class="article-author">Eric Alessi</div>
+  <h1 class="article-title">The Contact Improvisation Canon</h1>
+
+  <p>A directory I keep growing: the texts and films that shape my practice and my teaching, on seven shelves. Each entry says what the work argues and when to reach for it. Where a work has a free, legal home, the entry links to it; sources are being added shelf by shelf. Where a work is for sale, buy it.</p>
+
+  <ul class="toc-jump">
+    <li><span class="n">1</span> <a href="#shelf1">Paxton in his own words</a></li>
+    <li><span class="n">2</span> <a href="#shelf2">The gravity school</a></li>
+    <li><span class="n">3</span> <a href="#shelf3">Attention &amp; perception</a></li>
+    <li><span class="n">4</span> <a href="#shelf4">Consent, gender, hierarchy</a></li>
+    <li><span class="n">5</span> <a href="#shelf5">Jams, pedagogy, accessibility</a></li>
+    <li><span class="n">6</span> <a href="#shelf6">History &amp; scenes</a></li>
+    <li><span class="n">7</span> <a href="#shelf7">Video library &amp; directory</a></li>
+  </ul>
+
+  <div class="filter-bar">
+    <span>Show</span>
+    <button class="on" data-filter="all">Everything</button>
+    <button data-filter="free">Free only</button>
+    <button data-filter="paid">Paid only</button>
+    <button id="toggle-open">Open all</button>
+  </div>
+
+  <details class="shelf" id="shelf1">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 1 &middot; 6 entries</span>
+    <span class="shelf-title">Paxton in his own words</span>
+    <span class="shelf-desc">The founder's own words, 1972–2013. Quote from these, not from commentaries.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf1.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>The Grand Union <span class="meta">&middot; Steve Paxton, The Drama Review T-55, September 1972</span></h3></summary>
+    <p>Paxton's account, written in CI's birth season, of how Grand Union became leaderless: improvisation as the only form all could join as equals. Contains the circle-falling trust exercise with its training list (eyes' judgment, skin's sensitivity, timing, trust), a first-person description of bodies colliding and blending into one falling mass, and the statement that these dancers orient by weight and touch rather than the eye. CI's blueprint in print before the name existed.</p>
+  <p><i>If this library has one cornerstone, this is it.</i></p>
+    </details>
+
+  <details class="entry"><summary><h3>Contact Improvisation / Solo Dancing / Grand Union <span class="meta">&middot; the three founding texts, 1972–1977 (French ed. "D'un pied sur l'autre," trans. Bigé, Recherches en danse 2017)</span></h3></summary>
+    <p>The 1975 piece is the founding technical statement: easiest pathways within mutually dependent masses, touch and balance as the base senses, the training list starting with attitude. "Solo Dancing" holds the canonical aphorisms: soloing doesn't exist, dancer plus floor is already a duet, two dancers make a quartet, weight is only yours to give.</p>
+  <p class="bestfor"><b>Source</b> &middot; <a href="https://contactquarterly.com/contact-editions/">English originals in the CQ Sourcebook, $21 at Contact Editions</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Drafting Interior Techniques <span class="meta">&middot; Paxton, Contact Quarterly 18.1, 1993</span></h3></summary>
+    <p>The founding document of interior technique: how he used verbal images to focus dancers inside sensation, the small dance, the gaps where consciousness blacks out mid-roll, the "working model" mover he taught toward. Imagining a step already displaces weight. Ends with a dedication to John Cage.</p>
+  <p><i>Read it before anything modern about attention.</i></p>
+    </details>
+
+  <details class="entry"><summary><h3>Thoughts on Contact Improvisation <span class="meta">&middot; Paxton interviewed 1981, annotated by his 2013 self (ed. Mazzaglia, Danza e Ricerca 2013)</span></h3></summary>
+    <p>The deepest well of citable teaching language: gravity as the perceptual "field" with the moving point of contact as "figure"; feeling the floor through your partner's body as the principle CI rests on; the small dance introduced in 1972 so gravity could be observed working on the upright body. Plus his regret that standing has dropped out of practice, his replacement of "freedom" with "response-ability," and a sober late retraction of early utopianism.</p>
+  <p><i>The deepest well of teaching language on any shelf here.</i></p>
+    </details>
+
+  <details class="entry"><summary><h3>Steve Paxton: Drafting Interior Techniques <span class="meta">&middot; ed. Emma Bigé, Culturgest, Lisbon 2019</span></h3></summary>
+    <p>The book. The retrospective's catalogue: Bigé's "fugitive study" introduction framing Paxton's decades as patient investigations; Cvejić's "A Study in Anarchy" arguing Paxton transferred authority from persons to gravity itself; and the Godard/Bigé "Moving-moved" conversation. Sardo's foreword lands on the idea that Paxton taught what Newton couldn't: what it is to be the apple. Free and legal in full via the editor's own deposit: <a href="https://doi.org/10.5281/zenodo.10695529">Zenodo, DOI 10.5281/zenodo.10695529</a>.</p>
+  <p class="bestfor"><b>Source</b> &middot; <a href="https://doi.org/10.5281/zenodo.10695529">free in the full 2019 book, the editor's own Zenodo deposit</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Contact Improvisation and Politics <span class="meta">&middot; Nita Little with Peter Pleyer, 2013/2020, CQ Newsletter</span></h3></summary>
+    <p>Founder testimony: CI replaced modern dance's up/down hierarchy of weight with spirals where every direction has value; asking questions moment-by-moment is itself the politics; peripheral intelligence outruns centralized intelligence. Includes her eyewitness chronology: Magnesium seemed "for men only" until Paxton showed her the material; the Weber Gallery rehearsals were heavily videotaped and studied while still in body memory.</p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf2">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 2 &middot; 8 entries</span>
+    <span class="shelf-title">The gravity school</span>
+    <span class="shelf-desc">Where support comes from. The Floor as Sky shelf.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf2.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>Moving-moved <span class="meta">&middot; Hubert Godard &amp; Emma Bigé, in the 2019 Culturgest book</span></h3></summary>
+    <p>The single most important text on this shelf. The small dance as the discovery that we stream movements that aren't ours; tonic function rooted in the infant's tonic dialogue; CI as a "parietal dance" in which grounds communicate through bodies — my body makes a parcel of Earth perceivable to you; gravity as the repressed relation with no god in any pantheon. Mutual freedom with mutual dependence.</p>
+  <p><i>Read first. Slowly. Twice.</i></p>
+    </details>
+
+  <details class="entry"><summary><h3>The Missing Gesture <span class="meta">&middot; Godard interview, 1994 (Writings on Dance 15, 1996)</span></h3></summary>
+    <p>The clinical side: recovered patients missing specific gestures no test detects; "founding gestures" (pushing away, pointing, going towards) each learned in an affective situation — the capacity to say no lives in the muscles that push away; gesture born from gravitational organization (raising an arm begins in the calf).</p>
+  </details>
+
+  <details class="entry"><summary><h3>Phenomenological Space <span class="meta">&middot; Godard interviewed by McHose, Contact Quarterly 2006</span></h3></summary>
+    <p>Tonic function as half push from the floor, half suspension toward the sky — the ground-and-sky posture formula. The hamstring lengthens when you orient to ground and sky, not when you stretch it; CI named as the direct way to renegotiate the touch taboo.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Tonic Space <span class="meta">&middot; Emma Bigé, CQ Unbound 2017</span></h3></summary>
+    <p>The aesthetics of weight: upright posture as lifelong task (Straus), the small dance opening perception beneath volition, CI training "nomadic supports" — weight given spherically to any point. Where music gives tonal space, CI substitutes tonic space: coordinates defined by weight, dancers bathed in the gravitational field instead of sound.</p>
+  <p class="bestfor"><b>Source</b> &middot; <a href="https://cargocollective.com/sharingmovement">Emma Big&eacute;'s own site (texts + deposits)</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Living Weight <span class="meta">&middot; Emma Bigé, "Le poids vivant," 2018</span><span class="lang-tag">FR</span></h3></summary>
+    <p>The scholarly full version: postural tonus, parent-infant tonic dialogue, each partner a floor, the Earth rediscovered as a power of attraction one dialogues with, every step a modulated arc of falling. Quotes Paxton's mirror-floor workshop score — the inverted body that supports you — which is Floor as Sky stated by the founder.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Touch and the Fall <span class="meta">&middot; Emma Bigé, "L'haptique et la chute," 2015</span><span class="lang-tag">FR</span></h3></summary>
+    <p>Against the "shared equilibrium" cliché: equilibrium is death; the partner's job is to help you lose your verticals. Up and down become relative to the partner's body — his back a floor, a wall, a ramp. Welcoming a partner and grounding yourself are one act.</p>
+  <p><i>The closest published cousin to what I teach.</i></p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://cargocollective.com/sharingmovement">Emma Big&eacute;'s own site (texts + deposits)</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Horizontal Gravity <span class="meta">&middot; Michael O'Connor, 2015</span></h3></summary>
+    <p>A speculative attempt to define the pull between living bodies as a second gravity, ending in Hennessy's "post/contact" (failure more than flow).</p>
+  </details>
+
+  <details class="entry"><summary><h3>Leaning Bodies That Imagine <span class="meta">&middot; Ixiar Rozas, "Cuerpos inclinados que imaginan," 2020</span><span class="lang-tag">ES</span></h3></summary>
+    <p>Pandemic-era essay weaving Paxton's whole trajectory with Cavarero's "inclination": leaning toward gravity as critique of vertical, masculine rectitude.</p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf3">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 3 &middot; 9 entries</span>
+    <span class="shelf-title">Attention &amp; perception</span>
+    <span class="shelf-desc">What attention actually is in this dance, and how it gets trained: vision, touch, and the research behind reading a partner faster than thought.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf3.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>Before Your Eyes <span class="meta">&middot; Lisa Nelson, Contact Quarterly 29.1, 2004</span></h3></summary>
+    <p>The other founding lineage: vision as movement practice. Four years behind a camera taught her the eyes compose the body; she learned to catch the split-second of organization before an action appears; her group practice has watchers replay a dance with their bodies — a collective perception, a dance of opinions. She credits Paxton's 1972 survival question as her seed.</p>
+  <p><i>The journal's two-perspective format has an ancestor here.</i></p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="http://sarma.be/docs/3247">free full text at the Sarma archive</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Restructuring the Self-Sensing <span class="meta">&middot; Nita Little, Journal of Dance &amp; Somatic Practices 2014</span></h3></summary>
+    <p>Attention-to-attention as the training; trained attention slices a fall into many decisions where beginners get one chunk.</p>
+  <p class="bestfor"><b>Source</b> &middot; <a href="https://www.researchgate.net/publication/269285940_Restructuring_the_Selfsensing_Attention_training_in_contact_Improvisation">ResearchGate (author-posted)</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Bodyminds in Movement <span class="meta">&middot; Yotam Shibolet, 2018</span></h3></summary>
+    <p>CI as living lab for embodied cognition (Noë's enactive perception, Massumi's proprioceptive navigation); maps the physics-vs-chemistry split in CI's self-understanding; defends practitioner writing against neutral-spectator scholarship.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Expanding Empathic and Perceptive Awareness <span class="meta">&middot; Pini &amp; Deans, 2021</span></h3></summary>
+    <p>Attunement (Stern's infant research) as what CI trains; the dual gaze; and mismatch-and-repair — imperfect attunement as the productive mechanism.</p>
+  </details>
+
+  <details class="entry"><summary><h3>touch + talk <span class="meta">&middot; Malaika Sarco-Thomas, JDSP 2014</span></h3></summary>
+    <p>Lepkoff's CI-as-question made into a performable score: dancers answer a projected question by moving, touching and talking at once. The question menu doubles as journal prompts.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Momentum, gravity and "sensational facts" <span class="meta">&middot; Sarco-Thomas, 2015</span></h3></summary>
+    <p>The most compact teachable small-dance script in the set, plus Chung's fingertip "follow the one you lead" exercise with the space between fingers as third agent, and Little's attention "pop."</p>
+  </details>
+
+  <details class="entry"><summary><h3>Real-time Authorship <span class="meta">&middot; Chrysa Parkinson &amp; Emma Bigé, Contact Quarterly 2018</span></h3></summary>
+    <p>The dancer authors their experience without owning the work; the Stark Smith line that Paxton transmitted CI as a frame with the middle left empty.</p>
+  </details>
+
+  <details class="entry"><summary><h3>On Kinesic Analysis <span class="meta">&middot; Daniel Stern, The Drama Review 1973</span></h3></summary>
+    <p>The infant researcher Paxton cited and visited: micro-synchrony, the mother's exaggerations as the first performance, film conquering time.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Dancer–Dance–Spirituality <span class="meta">&middot; Ramaswamy &amp; Deslauriers, 2014</span></h3></summary>
+    <p>CI's unstated spiritual register given careful language: jams as hybrid of focused-attention and open-presence meditation; joining felt as movement from a third place.</p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf4">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 4 &middot; 9 entries</span>
+    <span class="shelf-title">Consent, gender, hierarchy</span>
+    <span class="shelf-desc">The hard conversations, in writing: touch and consent, power inside a form that claims to have none, and who the room actually welcomes.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf4.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>Nuances of Touch: Embodying and Communicating Nonverbal Consent in CI <span class="meta">&middot; Brynn Williams, MA thesis, UBC</span></h3></summary>
+    <p>The only full-length study of nonverbal consent in CI in this library (121 pages; full annotation pending).</p>
+  </details>
+
+  <details class="entry"><summary><h3>Gender Discourses in Contact Improvisation <span class="meta">&middot; María Paz Brozas-Polo, "Discursos de género," 2020</span><span class="lang-tag">ES</span></h3></summary>
+    <p>The definitive archaeology of the gender debate inside Contact Quarterly across 45 years, with a dated table of every relevant article.</p>
+  </details>
+
+  <details class="entry"><summary><h3>To Lead or Be Led <span class="meta">&middot; Brozas-Polo, "Llevar o ser llevada," 2022</span><span class="lang-tag">ES</span></h3></summary>
+    <p>Tango's explicit roles vs CI's supposed equality: the jam's openness can amplify elite power and leave room for abuse; the Magnesium all-male origin story.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Feeling and Moving Together <span class="meta">&middot; Emma Bigé, "Sentir et se mouvoir ensemble," 2015</span><span class="lang-tag">FR</span></h3></summary>
+    <p>The most clear-eyed insider text on CI's shadows: in-group language that discourages dissent, dress-code academicism, beginner humiliation, male-dominated teaching in female-majority communities — resolved through the small dance's community of sensing.</p>
+  <p><i>Required reading before writing a jam's code of conduct.</i></p>
+    </details>
+
+  <details class="entry"><summary><h3>Uneasy Breathing <span class="meta">&middot; Chrys Papaioannou, 2024/25</span></h3></summary>
+    <p>The strongest recent challenge to "just relax into gravity": Holland and Houston-Jones's 1983 Wrong Contact Manifesto; Paxton's uninhibited "imaginary person" read as an unmarked white subject; Nodine's observation that flow is a form of privilege. Tension reframed as socially produced.</p>
+  </details>
+
+  <details class="entry"><summary><h3>[Dis]Connected <span class="meta">&middot; Erin Stahmer, Barnard thesis 2011</span></h3></summary>
+    <p>A sympathetic audit of the universal-language claim: communication is real but conditional; hierarchies re-emerge; touch can turn coercive; and a documented decline of the small dance in teaching.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Dancing Anarchy <span class="meta">&middot; Emma Bigé, "Danser l'Anarchie," 2020</span><span class="lang-tag">FR</span></h3></summary>
+    <p>Post-modern dance wasn't democratic, it was anarchist: Judson's anti-institutionalism, Grand Union's temporary autonomous zone, CI's mutualism via Kropotkin — whom Paxton cites directly. Roles must form and never congeal.</p>
+  </details>
+
+  <details class="entry"><summary><h3>A Physical Quest for Natural Rights <span class="meta">&middot; Bojana Cvejić, in the 2019 Culturgest book</span></h3></summary>
+    <p>Paxton didn't remove authority from CI — he transferred it to gravity. Includes his pedagogical redirect (toward curiosity about momentum instead of prohibitions) and the letter arguing CI addresses sexism and racism by providing a proposition in which they are irrelevant.</p>
+  <p class="bestfor"><b>Source</b> &middot; <a href="https://doi.org/10.5281/zenodo.10695529">free in the full 2019 book on Zenodo</a></p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>How the First Rule Brought #MeToo to Contact Improvisation <span class="meta">&middot; Michelle Beaulieux, Contact Quarterly 44.1</span></h3></summary>
+    <p>The article that brought the reckoning into CI's own journal of record: how the form's founding "take care of yourself" rule can offload responsibility onto the least powerful person in the room, and what communities changed after #MeToo. Pairs with her response essay "Starting by Believing Maria."</p>
+    <p><i>The most important consent text of the last decade.</i></p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://contactquarterly.com/cq/article-gallery/view/how-the-first-rule-brought-metoo-to-contact-improvisation.pdf">free PDF at Contact Quarterly</a></p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf5">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 5 &middot; 8 entries</span>
+    <span class="shelf-title">Jams, pedagogy, accessibility</span>
+    <span class="shelf-desc">The Brozas shelf: María Paz Brozas-Polo (Universidad de León), historian of CI in Spain, plus the Buenos Aires school.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf5.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>The Aesthetic and Pedagogical Nature of Jams <span class="meta">&middot; Brozas-Polo, "Naturaleza estética y pedagógica de las jams," 2014</span><span class="lang-tag">ES</span></h3></summary>
+    <p>The sharpest anatomy of the jam as pedagogical device: a five-type map of what organizers think jams are for, and the documented drift toward beginner-social jams that experienced dancers abandon.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Pedagogy of the Sensitive Body <span class="meta">&middot; Brozas-Polo, "Pedagogía del cuerpo sensible," 2017</span><span class="lang-tag">ES</span></h3></summary>
+    <p>A decade of CQ "Essentials" teaching scores (Chung, Nelson, Little, Keogh, Lepkoff…) read as a pedagogy of touch: deep, extended, multiple, porous, spatial, internal touch; her closing challenge that CI never worked out what vision does.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Accessibility in Contact Improvisation <span class="meta">&middot; Brozas-Polo, "La accesibilidad en la danza CI," 2013</span><span class="lang-tag">ES</span></h3></summary>
+    <p>Accessibility as founding principle, with the full lineage (DanceAbility, blind-dancer work, Exposed to Gravity) dated and cited — plus the honest caveat that touch remains a social barrier.</p>
+  </details>
+
+  <details class="entry"><summary><h3>The Beginnings of CI in Spain <span class="meta">&middot; Brozas &amp; García, "Los comienzos de la danza CI en España," 2014</span><span class="lang-tag">ES</span></h3></summary>
+    <p>How CI actually roots in a new country: multiple unaware seeds, migration, one journal as connective tissue.</p>
+  </details>
+
+  <details class="entry"><summary><h3>CI and the Health Sciences <span class="meta">&middot; Sarco-Thomas &amp; Zammit</span></h3></summary>
+    <p>The Malta pilot: 8 weeks of CI for nursing students produced a measurable shift from self-only awareness to awareness of others' bodies.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Critical Potential · Destabilizing the Discipline · CI as Communication <span class="meta">&middot; the Buenos Aires school: Menacho 2008 · Tampini &amp; Farina ~2011 · Singer 2021</span><span class="lang-tag">ES</span></h3></summary>
+    <p>The Buenos Aires school, three philosophical readings: Marcuse (CI as lived non-manipulative relation), Foucault (CI destabilizing the discipline that produces docile bodies), Deleuze/Spinoza (the "third entity" as composition of relations that increases each body's power).</p>
+  </details>
+
+  <details class="entry"><summary><h3>Gestures of Contact Improvisation <span class="meta">&middot; Emma Bigé, "Gestes du CI," Musée de la danse 2019</span><span class="lang-tag">FR</span></h3></summary>
+    <p>A museum of dancing organized around seven gestures: not-doing, weighing/carrying, falling, playing, saying, looking, touching.</p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>The Underscore <span class="meta">&middot; Nancy Stark Smith's long-form jam score</span></h3></summary>
+    <p>Stark Smith's structure for a whole jam as one composed arc, developed from 1990 on and practiced worldwide every June as the Global Underscore. Her own page explains the practice; the famous one-page glyph sheet maps its phases in her hand-drawn symbols.</p>
+    <p><i>The map for designing a long session.</i></p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://nancystarksmith.com/underscore/">her official Underscore page</a> &middot; <a href="https://web.archive.org/web/20140617065108/http://nancystarksmith.com/files/beg._phases-glyphs_of_underscore_caught_pg91.pdf">the glyph sheet (PDF)</a></p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf6">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 6 &middot; 9 entries</span>
+    <span class="shelf-title">History &amp; scenes</span>
+    <span class="shelf-desc">Where the form came from, and the unexpected rooms it reached: galleries, mourning, forests, and fifty years of scenes.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf6.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry"><summary><h3>The Body as an Everyday Material <span class="meta">&middot; Archias, 2010</span></h3></summary>
+    <p>Pre-CI Paxton: why walking, why boredom, the Cunningham break.</p>
+  </details>
+
+  <details class="entry"><summary><h3>New forms of queer mourning <span class="meta">&middot; Ramírez Tur &amp; López del Rincón, 2023</span></h3></summary>
+    <p>The Touching Community: CI as mourning technology for dancers lost to AIDS — the most striking case of CI beyond the studio.</p>
+    <p class="bestfor"><b>Companion</b> &middot; <a href="https://openspace.sfmoma.org/2017/02/our-own-aids-time-keith-hennessy-and-ishmael-houston-jones-in-conversation/">Hennessy &amp; Houston-Jones in conversation on dancing through the AIDS years (SFMOMA Open Space)</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Sensing with Trees <span class="meta">&middot; Rufo, 2022</span></h3></summary>
+    <p>CI-derived solo practice with trees; directly usable on the island.</p>
+  </details>
+
+  <details class="entry"><summary><h3>On a journey, backwards <span class="meta">&middot; Georgelou, 2009</span></h3></summary>
+    <p>Late Paxton; his fluid-mass gravity mental state.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Soft Class <span class="meta">&middot; Papaioannou, 2024</span></h3></summary>
+    <p>The small dance read through the undercommons; confirms the Oberlin dawn Soft Class dating.</p>
+  </details>
+
+  <details class="entry"><summary><h3>Bodily Diversity <span class="meta">&middot; Brozas &amp; Vicente-Pedraz, "La diversidad corporal," 2017</span><span class="lang-tag">ES</span></h3></summary>
+    <p>The century-long canon-breaking arc landing on CI.</p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>The Experiment Called Contact Improvisation <span class="meta">&middot; FoundSF, the open San Francisco history archive</span></h3></summary>
+    <p>How CI rooted in the Bay Area, told through the city's own open history project: the scene, the spaces, the people who carried the form west.</p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="http://www.foundsf.org/index.php?title=The_Experiment_Called_Contact_Improvisation">read at FoundSF</a></p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>Researching Contact Improvisation <span class="meta">&middot; the Five Ways In documentary project, University of Kent</span></h3></summary>
+    <p>The research platform behind the anthropological CI documentary <i>Five Ways In</i> (Poltorak, Lynes, Br&uuml;hlmann): video research, themes from community to political change, and a blog running to 2020.</p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://researchingcontactimprovisation.com/">researchingcontactimprovisation.com</a></p>
+  </details>
+
+  <details class="entry"><summary><h3>Late arrivals, filed and pending annotation</h3></summary>
+    <p>Oxford Handbook CI chapter · Proximity magazine (Sept 2004 issue) · Stay Standing (Lochhead on stillness) · Kuhlmann on improvisation in performance.</p>
+  </details>
+
+  </div>
+</details>
+
+<details class="shelf" id="shelf7">
+  <summary>
+    <span class="shelf-head">
+    <span class="shelf-num">Shelf 7 &middot; 9 entries</span>
+    <span class="shelf-title">Video library &amp; directory</span>
+    <span class="shelf-desc">The films and lectures that matter, with where to watch them legally. Everything marked PAID is remarkably cheap: the entire founding film canon rents for $8 a film.</span>
+      </span>
+    <img class="shelf-art" src="img/shelf7.png" alt="">
+  </summary>
+  <div class="shelf-body">
+
+  <details class="entry" data-cost="free"><summary><h3>Swimming in Gravity <span class="meta">&middot; Steve Paxton lecture, 62 min, Contredanse</span></h3></summary>
+    <p>A full free hour of late Paxton talking about gravity, the small dance, and what your feet are doing right now. On Contredanse's own Vimeo: <a href="https://vimeo.com/403600420">vimeo.com/403600420</a>.</p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>Goldberg Variations <span class="meta">&middot; Steve Paxton, filmed by Walter Verdin, early 1990s</span></h3></summary>
+    <p>Paxton improvising to Glenn Gould, published free on the filmmaker's own YouTube channel: <a href="https://www.youtube.com/watch?v=5J4in0y3at4">Variations 1&ndash;15</a> &middot; <a href="https://www.youtube.com/watch?v=PU1ZO1LMpVk">Variations 16&ndash;30</a> &middot; <a href="https://www.youtube.com/watch?v=-8iTMMKtwYQ">Paxton's own introduction</a>.</p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>Fall After Newton: the excerpts <span class="meta">&middot; Videoda, 1987; excerpts via Martin Keogh</span></h3></summary>
+    <p>Eleven years of Paxton and Nancy Stark Smith dancing, narrated by Paxton. The official free excerpts live on Martin Keogh's YouTube: <a href="https://www.youtube.com/watch?v=EjhS7cXrrUc">watch the excerpts</a>. The full 22-minute film is in the Videoda archive below.</p>
+  </details>
+
+  <details class="entry" data-cost="paid"><summary><h3>The Videoda Archive <span class="meta">&middot; the six founding films, 1972&ndash;1983</span><span class="cost-tag paid">$8/film</span></h3></summary>
+    <p>Magnesium (1972), Soft Pallet, Peripheral Vision, Chute, Contact at 10th &amp; 2nd, and the full Fall After Newton — the complete founding film record, distributed by Contact Quarterly: <a href="https://contactquarterly.com/contact-editions/title/videoda-contact-improvisation-archive">rent for $8 per film (48h)</a>, $25 for three years, $50 to own.</p>
+  <p><i>Where all of this began, for the price of a coffee.</i></p>
+    </details>
+
+  <details class="entry" data-cost="paid"><summary><h3>Material for the Spine <span class="meta">&middot; Paxton's own technique, as an interactive web app</span><span class="cost-tag paid">&euro;25</span></h3></summary>
+    <p>Four-plus hours of exercises, lectures and performance documents — Paxton teaching his own system, adapted from the 2008 DVD-ROM: <a href="https://contredanse.org/en/product/web-app-material-for-the-spine/">materialforthespine.com, &euro;25 once, via Contredanse</a>.</p>
+  </details>
+
+  <details class="entry" data-cost="paid"><summary><h3>Force of Nature <span class="meta">&middot; documentary on Kirstie Simson, 75 min, dir. Katrina McPherson</span><span class="cost-tag paid">$9</span></h3></summary>
+    <p>A portrait of one of improvisation's great dancers: <a href="https://vimeo.com/ondemand/forceofnature">rent for $9 on Vimeo On Demand</a>, $30 to own.</p>
+  </details>
+
+  
+
+  <details class="entry" data-cost="free"><summary><h3>Bach Bit Improvisation, WOW Hall <span class="meta">&middot; Steve Paxton solo, 1991</span></h3></summary>
+    <p>Paxton improvising solo to Bach in 1991 &mdash; the same body of work as the Goldberg Variations, caught live in a hall instead of a studio. Third-party upload, so the link may not live forever.</p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://www.youtube.com/watch?v=nsBhOzAnWb8">watch on YouTube (unofficial upload)</a></p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>Paxton and Gerry Overington: a duet <span class="meta">&middot; Paxton dancing with a blind partner</span></h3></summary>
+    <p>Paxton in a contact duet with Gerry Overington, who is completely blind &mdash; the form's claim that dancers orient by weight and touch rather than the eye, shown instead of argued. Third-party upload, so the link may not live forever; the idea it documents pairs with the accessibility shelf.</p>
+    <p class="bestfor"><b>Source</b> &middot; <a href="https://www.youtube.com/watch?v=hJQgFDsAms4">watch on YouTube (unofficial upload)</a></p>
+  </details>
+
+  <details class="entry" data-cost="free"><summary><h3>Freiburg Contact Festival: the video archive <span class="meta">&middot; 2004&ndash;2025</span></h3></summary>
+    <p>Twenty years of festival documentaries, curated performance films and pioneer talks — the best festival video archive in CI: <a href="http://www.contactfestival.de/english/archiv/videoarchiv.htm">the archive index</a>.</p>
+  </details>
+
+  
+
+  </div>
+</details>
+
+<div class="subscribe">
+    <h2>Read along</h2>
+    <p>One email a week, one minute to read. The five things guiding my practice: a moment from the room, a passage from the dance literature, something worth watching, one thing to practice, and a question to carry.</p>
+    <a class="btn" href="https://perpetual-engine.kit.com/47f9180ef6">Join the Journal</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  Eric Alessi &middot; The Contact Improvisation Canon &middot; Draft v1, September 2026 &middot; Koh Phangan, Thailand
+</footer>
+
+<script>
+document.querySelectorAll('.filter-bar button[data-filter]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-bar button[data-filter]').forEach(function(b){ b.classList.remove('on'); });
+    btn.classList.add('on');
+    var mode = btn.getAttribute('data-filter');
+    document.querySelectorAll('.entry').forEach(function(e){
+      var cost = e.getAttribute('data-cost') || 'free';
+      e.classList.toggle('hidden', mode !== 'all' && cost !== mode);
+    });
+    document.querySelectorAll('details.shelf').forEach(function(s){
+      if (mode !== 'all') {
+        var visible = s.querySelectorAll('.entry:not(.hidden)').length;
+        s.classList.toggle('hidden', visible === 0);
+        s.open = visible > 0;
+      } else {
+        s.classList.remove('hidden');
+      }
+    });
+  });
+});
+document.querySelectorAll('.toc-jump a').forEach(function(a){
+  a.addEventListener('click', function(){
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  });
+});
+document.getElementById('toggle-open').addEventListener('click', function(){
+  var all = document.querySelectorAll('details.entry, details.shelf');
+  var anyClosed = Array.prototype.some.call(all, function(d){ return !d.open; });
+  all.forEach(function(d){ d.open = anyClosed; });
+  this.textContent = anyClosed ? 'Close all' : 'Open all';
+});
+</script>
+</body>
+</html>

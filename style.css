@@ -184,6 +184,9 @@ figcaption .photographer{
 }
 .subscribe h2{margin:0 0 .5em}
 .subscribe p{color:var(--muted);margin-bottom:1.5em}
+.subscribe .taste{list-style:none;padding:0;margin:0 0 1.6em}
+.subscribe .taste li{color:var(--muted);margin-bottom:.8em;padding-left:1.1em;position:relative}
+.subscribe .taste li::before{content:"\00B7";position:absolute;left:0;font-weight:700;color:var(--ink)}
 .btn{
   display:inline-block;
   font-size:14px;font-weight:600;letter-spacing:.02em;

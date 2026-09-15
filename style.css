@@ -49,6 +49,8 @@ article > *{grid-column:4}
 article > .chapter-tag,
 article > .article-author,
 article > h1.article-title,
+article > .carousel,
+article > .carousel-caption,
 article > figure{grid-column:3/6}
 
 .chapter-tag{
@@ -107,6 +109,23 @@ figcaption{
 }
 figcaption .photographer{
   font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+}
+
+/* ---------- archive carousel ---------- */
+.carousel{
+  display:flex;gap:.9rem;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  margin:2.6rem 0 0;padding-bottom:.4rem;
+}
+.carousel figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+.carousel img{height:340px;width:auto;display:block;background:var(--bg-sec)}
+.carousel-caption{
+  font-size:13px;line-height:1.55;color:var(--muted);
+  margin:.7rem 0 0;max-width:70ch;
+}
+@media (max-width:47.9em){
+  .carousel img{height:230px}
 }
 
 /* ---------- footnotes ---------- */

@@ -235,7 +235,7 @@ details.shelf.hidden{display:none}
   <p class="carousel-caption" style="margin:0 0 1.6rem">58 works on 7 shelves &middot; free and paid &middot; updated September 2026</p>
 
   <p>A directory I keep growing: the <a href="#shelf1">texts</a> and <a href="#shelf7">films</a> that shape my practice and my teaching, on seven shelves. Each entry says what the work argues and when to reach for it. Where a work has a free, legal home, the entry links to it; sources are being added shelf by shelf. Where a work is for sale, buy it.</p>
-  <p>The undertaking is deliberately big: to gather every interesting piece of work on Contact Improvisation and share it here, for the benefit of the global CI community. If something essential is missing, <a href="mailto:eric@perpetualnurture.com">write to me</a>.</p>
+  <p>The undertaking is deliberately big: to gather every interesting piece of work on Contact Improvisation and share it here, for the benefit of the global CI community. If something essential is missing, <a href="mailto:eric@perpetualnurture.com" onclick="document.getElementById('suggest-dialog').showModal();return false;">write to me</a>.</p>
   <p>One clarification on the paid entries: today I earn nothing from anything listed here. No commissions, and no association with any of the authors cited. I am sharing what I find interesting. If that ever changes, for example if book links become affiliate links, I will say so here first.</p>
 
   <ul class="toc-jump">
@@ -613,6 +613,21 @@ details.shelf.hidden{display:none}
 
   </div>
 </details>
+
+
+  <h2 style="margin-top:3.5rem">Is a book missing?</h2>
+  <p>If you know a work on Contact Improvisation that belongs here, in any language, tell me and I will chase it down.</p>
+  <p><a class="btn" href="mailto:eric@perpetualnurture.com?subject=Missing%20from%20the%20Canon" onclick="document.getElementById('suggest-dialog').showModal();return false;">Suggest a work</a></p>
+
+  <dialog id="suggest-dialog" style="border:1px solid #a2a9b1;border-radius:0;padding:1.8rem;max-width:460px;width:90vw">
+    <h2 style="margin:0 0 .4em">Suggest a work</h2>
+    <p style="font-size:13px;color:#6f6f6c;margin:0 0 1em">This opens your email app with the message ready to send.</p>
+    <textarea id="suggest-text" rows="5" placeholder="Title, author, and anything you know about where to find it..." style="width:100%;font:inherit;font-size:14px;padding:.7em;border:1px solid #a2a9b1;box-sizing:border-box"></textarea>
+    <div style="margin-top:1rem;display:flex;gap:.6rem">
+      <button class="btn" style="border:none;cursor:pointer;font:inherit;font-size:14px;font-weight:600" onclick="var t=document.getElementById('suggest-text').value;window.location.href='mailto:eric@perpetualnurture.com?subject='+encodeURIComponent('Missing from the Canon')+'&body='+encodeURIComponent(t);">Send</button>
+      <button style="background:none;border:1px solid #a2a9b1;border-radius:6px;cursor:pointer;font:inherit;font-size:14px;padding:.85em 1.5em" onclick="document.getElementById('suggest-dialog').close()">Cancel</button>
+    </div>
+  </dialog>
 
 <div class="subscribe">
     <h2>Read along</h2>

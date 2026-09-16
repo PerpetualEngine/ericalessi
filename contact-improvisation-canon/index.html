@@ -202,6 +202,9 @@ details.shelf.hidden{display:none}
   margin:4rem 0 0;
   border-radius:6px;
 }
+.brush{position:relative;z-index:0;display:inline-block;padding:.12em .45em .1em;margin-left:-.45em}
+.brush::before{content:"";position:absolute;left:0;right:0;top:-.05em;bottom:-.05em;z-index:-1;
+  background:url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 64%27 preserveAspectRatio=%27none%27><path fill=%27%23ffffff%27 d=%27M6 30 C 40 10, 90 26, 130 14 S 210 30, 250 12 S 330 28, 394 10 L 392 40 C 350 58, 300 34, 250 52 S 160 34, 120 54 S 50 36, 8 56 Z%27/></svg>") no-repeat center/100% 100%;transform:rotate(-1.2deg)}
 .subscribe-eyebrow{font-size:.76rem;font-weight:400;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin:0 0 .9rem}
 .subscribe h2{margin:0 0 .5em}
 .subscribe p{color:var(--muted);margin-bottom:1.5em}
@@ -1016,7 +1019,7 @@ details.shelf.hidden{display:none}
 
 <div class="subscribe">
     <div class="subscribe-eyebrow">An honest newsletter</div>
-    <h2>Fuel for the curious dancer</h2>
+    <h2><span class="brush">Fuel for the curious dancer</span></h2>
     <p>One short email a week. One minute to read and be inspired.</p>
     <p>A taste from a recent edition:</p>
     <p>A statement I can't stop returning to:</p>

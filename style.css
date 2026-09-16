@@ -256,7 +256,7 @@ article blockquote{border-left-color:#151312;color:#3a3733}
 @keyframes celebrate{0%{transform:scaleX(1)}35%{transform:scaleX(.78)}70%{transform:scaleX(1.08)}100%{transform:scaleX(1)}}
 .zen{position:relative;display:inline-block;padding:.05em .5em .05em .3em;margin-left:-.3em}
 .zen>img{position:absolute;left:-.95em;top:-.6em;width:calc(100% + 5.5em);height:calc(100% + 1.1em);z-index:0;transform:rotate(-1deg);pointer-events:none}
-.zen>span{position:relative;z-index:1;color:#FFFFFF}
+.zen>span{position:relative;z-index:1;color:#151312}
 .hero .btn{background:#C9F57E;color:#2B2521;transition:none}
 .hero .btn:hover{background:#C9F57E;filter:brightness(.95);text-decoration:underline}
 .hero .btn:hover>span{animation:none}
@@ -265,7 +265,7 @@ article blockquote{border-left-color:#151312;color:#3a3733}
 .subscribe.stamp .subscribe-eyebrow{color:#151312;font-size:12px;margin:0}
 .subscribe.stamp h2{margin:.2rem 0 0}
 .subscribe.stamp .zen{margin-left:0}
-.subscribe.stamp .promise{color:#151312;font-size:16px;max-width:40ch;margin:0}
+.subscribe.stamp .promise{color:#151312;font-size:16px;max-width:52ch;margin:0}
 .subscribe.stamp .btn{margin-top:.2rem}
 .subscribe.stamp .rule{display:flex;align-items:center;gap:1rem;width:100%;margin-top:1.4rem}
 .subscribe.stamp .rule>span{flex:1;height:1px;background:rgba(21,19,18,.18)}
@@ -293,7 +293,7 @@ article blockquote{border-left-color:#151312;color:#3a3733}
 .subscribe.stamp .part .who{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6F6F6C;margin:0 0 8px}
 .subscribe.stamp .mast-name .zen{padding:.35em .9em .35em .6em;margin:0}
 .subscribe.stamp .mast-name .zen>img{left:-1.4em;top:-.9em;width:calc(100% + 5.5em);height:calc(100% + 1.8em);transform:rotate(-1deg)}
-.subscribe.stamp .mast-name .zen>span{color:#FFFFFF}
+.subscribe.stamp .mast-name .zen>span{color:#151312}
 .sample-section{margin:2.6rem 0 0;display:flex;flex-direction:column;align-items:center;gap:1.2rem;text-align:center}
 .sample-section .rule{display:flex;align-items:center;gap:1rem;width:100%}
 .sample-section .rule>span{flex:1;height:1px;background:#E6E6E3}
@@ -303,7 +303,7 @@ article blockquote{border-left-color:#151312;color:#3a3733}
 .sample-section .mast-name{font-family:"Manrope",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase}
 .sample-section .mast-name .zen{padding:.35em .9em .35em .6em;margin:0}
 .sample-section .mast-name .zen>img{left:-1.4em;top:-.9em;width:calc(100% + 5.5em);height:calc(100% + 1.8em);transform:rotate(-1deg)}
-.sample-section .mast-name .zen>span{color:#FFFFFF}
+.sample-section .mast-name .zen>span{color:#151312}
 .sample-section .mast-tag{font-size:12.5px;color:#3a3733;margin-top:7px;font-style:italic}
 .sample-section .ed-title{font-family:"Manrope",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:22px;line-height:1.2;color:#151312;padding:14px 30px 0}
 .sample-section .ed-meta{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6F6F6C;padding:0 30px}
@@ -316,3 +316,15 @@ article blockquote{border-left-color:#151312;color:#3a3733}
 .sample-section .part .who{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6F6F6C;margin:0 0 8px}
 .sample-section .signoff{margin:8px 0 0;padding:0 30px;font-size:14.5px;line-height:1.6;color:#151312}
 .site-footer{color:#6F6F6C}
+h2.brushed{font-family:"Manrope",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:1.54rem}
+h2.brushed .zen>span{color:#FFFFFF}
+.subscribe.stamp h2.plainwhite{color:#FFFFFF}
+.sample-section .mast-name .zen>span.grey{color:#6F6F6C}
+article > .subscribe.fullbleed{grid-column:1/-1;border-radius:0;padding-left:4vw;padding-right:4vw}
+.subscribe.stamp .subscribe-eyebrow .zen{padding:.35em .9em .35em .7em;margin:0}
+.subscribe.stamp .subscribe-eyebrow .zen>img{left:-1.1em;top:-.8em;width:calc(100% + 3.2em);height:calc(100% + 1.6em)}
+.subscribe.stamp .subscribe-eyebrow .zen>span{color:#151312}
+.sample-section .mast-tag .zen{padding:.3em .8em .3em .6em;margin:0}
+.sample-section .mast-tag .zen>img{left:-.9em;top:-.7em;width:calc(100% + 2.6em);height:calc(100% + 1.4em)}
+.sample-section .mast-tag .zen>span{color:#3a3733}
+.sample-section .mast-name.grey{color:#FFFFFF}

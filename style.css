@@ -83,7 +83,7 @@ h2{
 }
 p{margin:0 0 1.05em}
 a{color:#3366cc}
-a:visited{color:#151312}
+a:visited{color:#3366cc}
 a:hover{text-decoration:underline}
 
 article blockquote{
@@ -242,8 +242,9 @@ figcaption .photographer{
 /* ---------- 2026-09-16 redesign: ink, sky card, Manrope, brush ---------- */
 :root{--bg:#FFFFFF;--bg-sec:#EDEDEA;--ink:#151312;--muted:#6F6F6C;--hair:#E6E6E3;--btn-ink:#151312}
 body{background:#FFFFFF;color:#151312}
-a{color:#151312;text-decoration:underline;text-decoration-color:#B5B5B0;text-underline-offset:3px}
-a:visited{color:#151312}
+a{color:#3366cc;text-decoration:none}
+a:visited{color:#3366cc}
+a:hover{text-decoration:underline;text-underline-offset:3px}
 .site-header a,.btn,.carousel a{text-decoration:none}
 .site-header nav a:hover{text-decoration:underline;text-decoration-color:#151312;text-decoration-thickness:1px}
 article blockquote{border-left-color:#151312;color:#3a3733}

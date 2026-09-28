@@ -328,3 +328,4 @@ article > .subscribe.fullbleed{grid-column:1/-1;border-radius:0;padding-left:4vw
 .sample-section .mast-tag .zen>img{left:-.9em;top:-.7em;width:calc(100% + 2.6em);height:calc(100% + 1.4em)}
 .sample-section .mast-tag .zen>span{color:#3a3733}
 .sample-section .mast-name.grey{color:#FFFFFF}
+.subscribe.stamp h2{text-transform:uppercase;letter-spacing:.22em}

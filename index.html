@@ -95,13 +95,19 @@
         if(f.querySelector('[name=_honey]').value) return;
         var d={name:f.name.value,email:f.email.value,_subject:'CuriosiLab: '+(f._subject.value||'The five-hour lab'),message:f.message.value,_template:'table',_replyto:f.email.value};
         b.disabled=true; b.textContent='Sending...'; st.textContent='';
-        fetch('https://formsubmit.co/ajax/eric@perpetualnurture.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+        var ac=('AbortController' in window)?new AbortController():null; var to=setTimeout(function(){ if(ac) ac.abort(); },12000);
+        fetch('https://formsubmit.co/ajax/eric@perpetualnurture.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d),signal:ac?ac.signal:undefined})
           .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
           .then(function(x){
+            clearTimeout(to);
             if(x.ok && String(x.j.success)==='true'){ f.reset(); f.classList.add('sent'); st.textContent='Sent. Eric will write back to you.'; b.textContent='Sent'; }
             else { throw new Error('not sent'); }
           })
-          .catch(function(){ b.disabled=false; b.textContent='Send to Eric'; st.textContent='That did not go through. Please email eric@perpetualnurture.com directly.'; });
+          .catch(function(){
+            clearTimeout(to); b.disabled=false; b.textContent='Send to Eric';
+            var m='mailto:eric@perpetualnurture.com?subject='+encodeURIComponent(d._subject)+'&body='+encodeURIComponent(d.message+'\n\n'+d.name+'\n'+d.email);
+            st.innerHTML='That did not go through. <a href="'+m+'">Send it from your own email instead</a>, your message is already filled in.';
+          });
       });
     })();
     </script>

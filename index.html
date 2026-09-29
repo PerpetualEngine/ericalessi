@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://ericalessi.com/">
-<link rel="stylesheet" href="style.css?v=20260929a">
+<link rel="stylesheet" href="style.css?v=20260929b">
 </head>
 <body>
 
@@ -71,7 +71,40 @@
     <h3>The four-week program</h3>
     <p>The deeper format is the four-week program, one lab a week for a month. That is the ideal vision: to truly transform from the inside out.</p>
     <h3>Join the next lab</h3>
-    <p>To join the next lab, <a href="mailto:eric@perpetualnurture.com?subject=The%20five-hour%20lab">write to Eric</a>.</p>
+    <p>Write to Eric here. He answers personally.</p>
+    <form class="lab-form" id="lab-form" action="https://formsubmit.co/eric@perpetualnurture.com" method="POST">
+      <input type="hidden" name="_next" value="https://ericalessi.com/#lab-form">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="lab-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <label for="lf-name">Your name<input id="lf-name" name="name" type="text" autocomplete="name" required></label>
+        <label for="lf-email">Your email<input id="lf-email" name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label for="lf-subject">Subject<input id="lf-subject" name="_subject" type="text" value="The five-hour lab"></label>
+      <label for="lf-msg">Your message<textarea id="lf-msg" name="message" rows="5" placeholder="Your dance background, the dates you are on the island, anything you want me to know." required></textarea></label>
+      <button class="btn" type="submit" id="lf-send">Send to Eric</button>
+      <p class="lab-form-status" id="lf-status" role="status" aria-live="polite"></p>
+      <p class="lab-form-alt">Prefer your own email? <a href="mailto:eric@perpetualnurture.com?subject=The%20five-hour%20lab">eric@perpetualnurture.com</a></p>
+    </form>
+    <script>
+    (function(){
+      var f=document.getElementById('lab-form'); if(!f||!window.fetch) return;
+      var st=document.getElementById('lf-status'), b=document.getElementById('lf-send');
+      f.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(f.querySelector('[name=_honey]').value) return;
+        var d={name:f.name.value,email:f.email.value,_subject:'CuriosiLab: '+(f._subject.value||'The five-hour lab'),message:f.message.value,_template:'table',_replyto:f.email.value};
+        b.disabled=true; b.textContent='Sending...'; st.textContent='';
+        fetch('https://formsubmit.co/ajax/eric@perpetualnurture.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+          .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+          .then(function(x){
+            if(x.ok && String(x.j.success)==='true'){ f.reset(); f.classList.add('sent'); st.textContent='Sent. Eric will write back to you.'; b.textContent='Sent'; }
+            else { throw new Error('not sent'); }
+          })
+          .catch(function(){ b.disabled=false; b.textContent='Send to Eric'; st.textContent='That did not go through. Please email eric@perpetualnurture.com directly.'; });
+      });
+    })();
+    </script>
   </div>
 
   <h2 class="brushed">From the students</h2>

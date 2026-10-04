@@ -51,6 +51,7 @@ article > .chapter-tag,
 article > .article-author,
 article > h1.article-title,
 article > .carousel,
+article > .ig-grid,
 article > .carousel-caption,
 article > figure{grid-column:3/6}
 
@@ -134,6 +135,12 @@ figcaption .photographer{
   .hero{height:70vh;min-height:420px}
   .hero-content{padding:0 5.5vw 2.6rem}
 }
+
+/* ---------- instagram grid ---------- */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:1.2rem 0 .6rem}
+.ig-grid a{display:block;line-height:0}
+.ig-grid img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:var(--bg-sec)}
+.ig-grid a:hover img{opacity:.88}
 
 /* ---------- archive carousel ---------- */
 .carousel{

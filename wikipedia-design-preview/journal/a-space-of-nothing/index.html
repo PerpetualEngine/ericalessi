@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>A Space of Nothing · Wikipedia design preview · Eric Alessi</title>
+<meta name="description" content="Before Contact Improvisation had a name, its founders sat in one composition class at the Cunningham studio. What Robert Dunn actually taught, in his own words, and why a teacher&#x27;s refusal to give a recipe still shapes how CI gets passed on. Practice Journal entry 02.">
+<style>
+:root{--blue:#3366cc;--visited:#795cb2;--rule:#a2a9b1;--boxbg:#f8f9fa;--ink:#202122;--muted:#54595d;--hair:#eaecf0}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6}
+a{color:var(--blue);text-decoration:none}a:visited{color:var(--blue)}a:hover{text-decoration:underline}
+.topbar{border-bottom:1px solid var(--hair);padding:.55rem 1.2rem;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:#fff;position:sticky;top:0;z-index:5}
+.topbar .brand{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:1.3rem;color:var(--ink)}
+.topbar .brand small{font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;color:var(--muted);margin-left:.5em;letter-spacing:.04em;text-transform:uppercase}
+.topbar nav a{margin-left:1.1rem;color:var(--ink)}
+.topbar nav a.cur{font-weight:700}
+.previewnote{background:#fef6e7;border-bottom:1px solid #fc3;color:#4a3b00;font-size:12.5px;padding:.4rem 1.2rem}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);max-width:1180px;margin:0 auto;gap:1.6rem;padding:1.2rem}
+.sidebar{font-size:13px}
+.toc{position:sticky;top:3.4rem;border:1px solid var(--hair);background:var(--boxbg);padding:.8rem 1rem;border-radius:2px;max-height:calc(100vh - 4.4rem);overflow:auto}
+.toc h2{font-size:14px;margin:.1em 0 .5em;font-family:inherit;border:none;font-weight:700;padding:0}
+.toc ul{list-style:none;margin:0;padding:0}.toc ul ul{padding-left:1.1em}
+.toc li{margin:.35em 0}
+.tocnum{color:var(--ink);margin-right:.4em}
+.toc .pages{margin-top:1em;padding-top:.7em;border-top:1px solid var(--hair)}
+.toc .pages h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+h1{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:2rem;font-weight:400;margin:0 0 .1em;border-bottom:1px solid var(--rule);padding-bottom:.15em;line-height:1.3}
+.siteSub{font-size:12.5px;color:var(--muted);margin:0 0 1em}
+.hatnote{font-size:13px;font-style:italic;color:var(--muted);padding-left:1.6em;margin:.4em 0 1em}
+h2{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:1.5rem;font-weight:400;border-bottom:1px solid var(--rule);margin:1.6em 0 .4em;padding-bottom:.15em;line-height:1.3}
+h3{font-size:1.05rem;font-weight:700;margin:1.2em 0 .3em}
+main p{margin:.5em 0}
+.wdesc{color:var(--muted);margin:.2em 0 1em}
+.wentry{margin:0 0 1.15em}
+.wentry p{margin:.25em 0}
+.wtitle{margin-bottom:.1em}
+.wmeta{color:var(--muted);font-weight:400}
+.wdet{color:var(--muted);font-size:13px}
+.wsrc{font-size:13px}
+.wsrc b{font-weight:400;color:var(--muted)}
+.lang{font-size:10.5px;border:1px solid var(--rule);padding:0 .35em;margin-left:.4em;color:var(--muted);vertical-align:middle;font-weight:400}
+.pill{font-size:10.5px;padding:.05em .45em;margin-left:.4em;vertical-align:middle;font-weight:400;border:1px solid var(--rule);border-radius:2px;color:var(--muted)}
+.pill.free{border-color:#9fd3a6;background:#eef9ef;color:#1b5e20}
+.infobox{float:right;clear:right;width:272px;margin:0 0 1em 1.6em;border:1px solid var(--rule);background:var(--boxbg);font-size:12.5px;line-height:1.5;padding:0;border-radius:2px}
+.infobox .ib-title{text-align:center;font-weight:700;font-size:14px;padding:.5em .6em;background:var(--hair)}
+.infobox img{width:100%;display:block}
+.infobox .cap{font-size:11.5px;color:var(--muted);padding:.3em .6em .4em;text-align:center}
+.infobox table{border-collapse:collapse;width:100%}
+.infobox th{text-align:left;vertical-align:top;padding:.35em .6em;width:42%;font-weight:700}
+.infobox td{padding:.35em .6em}
+.thumb{float:right;clear:right;margin:.5em 0 1em 1.6em;border:1px solid #c8ccd1;background:var(--boxbg);padding:3px;width:272px;font-size:12px}
+.thumb img{width:100%;display:block;border:1px solid #c8ccd1}
+.thumb .tcap{padding:.4em .3em .2em;color:var(--ink)}
+.wikitable{border-collapse:collapse;font-size:13.5px;margin:1em 0;width:100%}
+.wikitable th{background:var(--hair);border:1px solid var(--rule);padding:.4em .6em;text-align:left}
+.wikitable td{border:1px solid var(--rule);padding:.4em .6em;vertical-align:top}
+.catbox{border:1px solid var(--rule);background:var(--boxbg);font-size:13px;padding:.5em .8em;margin:2.5em 0 1em}
+.catbox a{margin:0 .15em}
+blockquote{margin:.6em 0 .6em 1.6em;color:#444;border-left:3px solid var(--hair);padding-left:1em}
+blockquote p{margin:.3em 0}
+.quote-attr{color:var(--muted);font-size:13px}
+sup a{font-size:11px}sup a::before{content:"["}sup a::after{content:"]"}
+ol.references{font-size:12.5px;padding-left:1.6em;color:var(--ink)}
+ol.references li{margin:.3em 0}
+.footnotes p{font-size:12.5px;margin:.3em 0}
+.footnotes .fnum{display:inline-block;min-width:1.3em;color:var(--blue)}
+.footnotes .fnum::before{content:"^ "}
+.signoff{margin:1.4em 0}
+.navbox{border:1px solid var(--rule);background:var(--boxbg);font-size:12.5px;margin:2em 0 0;padding:.5em .8em}
+.navbox th{background:var(--hair);text-align:center;padding:.3em}
+.ambox{border:1px solid var(--rule);border-left:10px solid #36c;background:#fbfbfb;padding:.5em 1em;margin:.8em 0 1.2em;font-size:13px}
+.ambox.green{border-left-color:#1b5e20}
+.sister{border:1px solid var(--rule);background:var(--boxbg);padding:.8em 1em;margin:1.2em 0;font-size:13px;display:flex;gap:1em;align-items:flex-start}
+.sister .s-head{font-weight:700;font-size:14px;margin-bottom:.2em}
+.sister .btn{display:inline-block;margin-top:.5em;border:1px solid var(--rule);background:#fff;padding:.35em .9em;border-radius:2px;color:var(--ink);font-weight:600}
+.sister .btn:hover{text-decoration:none;background:var(--hair)}
+.sample{border:1px solid var(--hair);background:#fff;padding:1em 1.2em;margin:.8em 0 0;font-size:13.5px}
+.sample .lab{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:.9em}
+.sample .q{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:1.2rem;margin:.2em 0}
+/* main page */
+.mp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.mp-box{border:1px solid #a7d7f9;border-radius:2px;background:#f5faff}
+.mp-box h2{font-family:inherit;font-size:14px;font-weight:700;background:#cedff2;border:none;margin:0;padding:.45em .8em;color:var(--ink)}
+.mp-box .mp-body{padding:.6em .9em .8em}
+.mp-box.green{border-color:#b6dba9;background:#f5fbf3}.mp-box.green h2{background:#cef2e0}
+.mp-box.grey{border-color:#c8ccd1;background:var(--boxbg)}.mp-box.grey h2{background:var(--hair)}
+.mp-box.violet{border-color:#d9c7ea;background:#faf5ff}.mp-box.violet h2{background:#e8dcf5}
+.mp-box ul{margin:.3em 0;padding-left:1.2em}
+.mp-box li{margin:.3em 0}
+.mp-welcome{border:1px solid #a7d7f9;background:#f5faff;padding:.9em 1.1em;margin:1rem 0}
+.mp-welcome .big{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:1.6rem}
+.mp-span{grid-column:1 / -1}
+.pagecard{display:grid;grid-template-columns:110px 1fr;gap:.9em;margin:.8em 0;align-items:start}
+.pagecard img{width:110px;height:74px;object-fit:cover;border:1px solid #c8ccd1}
+.pagecard .pc-ph{width:110px;height:74px;border:1px solid #c8ccd1;background:#fff;display:grid;place-items:center;font-family:"Linux Libertine",Georgia,serif;font-size:1.7rem;color:#999}
+.pagecard b a{font-size:15px}
+.pagecard .meta{color:var(--muted);font-size:12.5px}
+.footer{max-width:1180px;margin:2rem auto 0;padding:1rem 1.2rem 2rem;border-top:1px solid var(--hair);font-size:12px;color:var(--muted)}
+@media(max-width:900px){.layout{display:block;padding:1rem}.toc{position:static;margin-bottom:1.2rem;max-height:none}.infobox,.thumb{float:none;width:100%;margin:0 0 1em}.mp-grid{grid-template-columns:1fr}.topbar nav a{margin:0 .9rem 0 0}.topbar{position:static}}
+</style>
+</head>
+<body>
+<div class="previewnote">Design preview, not public. Every page of ericalessi.com rebuilt in the Wikipedia layout so Eric can scroll through and pick a direction. Live version: <a href="https://ericalessi.com/journal/a-space-of-nothing-robert-dunn-john-cage-steve-paxton/">ericalessi.com/journal/a-space-of-nothing-robert-dunn-john-cage-steve-paxton/</a>.</div>
+<div class="topbar"><a class="brand" href="../../index.html">Eric Alessi <small>wiki</small></a><nav><a href="../../index.html">Main Page</a><a href="../../eric-alessi/">Eric Alessi</a><a href="../../index.html#journal">Practice Journal</a><a href="../../world-library/">World Library</a><a href="https://perpetual-engine.kit.com/47f9180ef6">Subscribe</a></nav></div>
+<div class="layout">
+<aside class="sidebar"><div class="toc"><h2>Contents</h2><ul><li><a href="#s1"><span class="tocnum">1</span> Cage's idea, someone else's classroom</a></li><li><a href="#s2"><span class="tocnum">2</span> The refusal that mattered</a></li><li><a href="#s3"><span class="tocnum">3</span> Why I keep coming back to this</a></li><li><a href="#s4"><span class="tocnum">4</span> One thing to practice</a></li><li><a href="#s5"><span class="tocnum">5</span> A question to carry</a></li><li><a href="#s6"><span class="tocnum">6</span> Fuel for the curious dancer</a></li><li><a href="#refs"><span class="tocnum">7</span> References</a></li></ul><div class="pages"><h2>Pages in this preview</h2><ul><li><a href="../../index.html">Main Page</a></li><li><a href="../../eric-alessi/">Eric Alessi</a></li><li><a href="../../journal/the-floor-becomes-the-ceiling/">The Floor Becomes the Ceiling</a></li><li><b>A Space of Nothing</b></li><li><a href="../../world-library/">World Library</a></li></ul></div></div></aside>
+<main>
+<h1>A Space of Nothing</h1>
+<div class="siteSub">The Practice Journal &middot; Entry 02 (2026) &middot; Eric Alessi &middot; September 2026</div>
+<div class="hatnote">This is an entry in <a href="../../eric-alessi/#journal">The Practice Journal</a>, Eric Alessi's weekly record of what was taught and what the dancers found.</div>
+<div class="infobox"><div class="ib-title">A Space of Nothing</div><table><tr><th>Series</th><td>The Practice Journal</td></tr><tr><th>Entry</th><td>02 of 2</td></tr><tr><th>Author</th><td><a href="../../eric-alessi/">Eric Alessi</a></td></tr><tr><th>Published</th><td>September 2026</td></tr><tr><th>Place</th><td>Koh Phangan, Thailand</td></tr></table></div>
+
+  
+
+  <p>Twelve dollars for two years of class. Before Contact Improvisation had a name, its founders sat in the same room. Fall 1960 to spring 1962, at the Merce Cunningham Studio on 14th Street, a composition class ran for ten to twelve sessions at a time, taught by a man almost nobody outside dance history has heard of: Robert Ellis Dunn.<sup><a href="#dunn-class-dates" id="ref-dunn-class-dates">1</a></sup> The class fed directly into the first Judson Dance Theater concert. One of the people in the room was Steve Paxton, twelve years before he had a word for what he'd go on to build.</p>
+
+  <h2 id="s1">Cage's idea, someone else's classroom</h2>
+  <p>Dunn didn't set out to start anything. In his own account, written twenty years later: "I was asked to give these courses by John Cage, who had himself given such in the past and was banking on my knowledge of dance and current practices in several other fields or arts."<sup><a href="#dunn-journal-1980" id="ref-dunn-journal-a">2</a></sup> Cunningham donated the studio for free. Dunn's wife, Judith Dunn, co-taught. The fee for an entire course was twelve to fifteen dollars, and anyone who came back for the later courses paid nothing at all.</p>
+  <p>Later histories of the period place Steve Paxton, Yvonne Rainer, and Simone Forti among the students who passed through those years of classes: three people who would each go on to reshape what a body could do on a stage without anyone choreographing it.<sup><a href="#banes-democracys-body" id="ref-banes">3</a></sup> Dunn's own surviving account doesn't name them; what it does tell us, in detail, is what the room was actually built to do.</p>
+
+  <h2 id="s2">The refusal that mattered</h2>
+  <p>Dunn describes his own approach as a kind of clearing: "the notion in teaching of making a 'clearing', a sort of 'space of nothing', in which things could appear and grow in their own nature. Before each class, I made the attempt to attain this state of mind, with varying success of course."<sup><a href="#dunn-journal-1980" id="ref-dunn-journal-b">2</a></sup></p>
+  <p>And then the line that I think matters most, for anyone who teaches anything improvised: "We sometimes worked from 'principles', but in the sense of 'starting points' rather than regulating controls. My refusal to provide a 'recipe' toward which to work for approval or disapproval periodically got me in hot water emotionally with members of the class."<sup><a href="#dunn-journal-1980" id="ref-dunn-journal-c">2</a></sup></p>
+  <p>He wasn't withholding a method he had and wasn't sharing. There was no recipe to give. Each dance, in his words, was "an animal of which there is only one of the species", something with its own nature, not a variation to be graded against a standard.<sup><a href="#dunn-journal-1980" id="ref-dunn-journal-d">2</a></sup> That is not a comfortable thing to sit inside as a student. It is, by his own account, the thing his students sat inside for two years, and what came out the other side of it was a dance form built on nobody leading.</p>
+
+  <h2 id="s3">Why I keep coming back to this</h2>
+  <p>I didn't grow up in this lineage. I met Contact Improvisation forty-odd years after Dunn's last class. But when I read his account for the first time, I recognized the room. Every time I open a lab with "what do you think you really need" instead of a plan, I am doing the smaller, later version of what Dunn describes doing on 14th Street: making the clearing, and trusting the group to grow something in it that I could not have handed them.</p>
+  <p>It also means something to know that this refusal, no recipe, no approval, no disapproval, got a teacher in real trouble with real students, twenty years before he wrote it down and admitted it plainly. The discomfort was never a bug in the method. It was the method.</p>
+
+  <h2 id="s4">One thing to practice</h2>
+  <p>Next time you teach, or next time you dance: catch the moment you want to hand someone the "right" way through a shape, and don't. Offer the clearing instead. Notice what it costs you to withhold the recipe, and what it gives the room.</p>
+
+  <h2 id="s5">A question to carry</h2>
+  <p>What is the recipe you keep almost handing people, and what would happen if you let the class stay a clearing instead?</p>
+
+  <p class="signoff">Until next week,<br>Eric</p>
+
+  <h2 id="refs">References</h2><div class="footnotes">
+    <p><span class="fnum" id="dunn-class-dates">1</span> The class ran fall 1960 to spring 1962 and was immediately followed by the first "Concert of Dance" at Judson Church. <a href="#ref-dunn-class-dates">&#8617;</a></p>
+    <p><span class="fnum" id="dunn-journal-1980">2</span> Robert Ellis Dunn, journal writing dated 30 March 1980, originally published in <em>Contact Quarterly</em>, Winter 1989. Free and legal full text via <a href="https://movementresearch.org/publications/critical-correspondence/mrpj-14-the-legacy-of-robert-ellis-dunn-1928-1996-excerpt-from-robert-dunns-journal-writings-in-lieu-of-editors-note/">Movement Research's Critical Correspondence</a>. <a href="#ref-dunn-journal-b">&#8617;</a> <a href="#ref-dunn-journal-c">&#8617;</a> <a href="#ref-dunn-journal-d">&#8617;</a></p>
+    <p><span class="fnum" id="banes-democracys-body">3</span> This specific roster comes from later histories of the period, principally Sally Banes' <em>Democracy's Body: Judson Dance Theater, 1962&ndash;1964</em>, not from Dunn's own surviving account. <a href="#ref-banes">&#8617;</a></p>
+  </div>
+
+  <div class="subscribe stamp">
+    <div class="subscribe-eyebrow">Join my newsletter</div>
+    <h2 id="s6"><span class="zen"><img src="../../images/zen-stroke.png" alt=""><span>Fuel for the curious dancer</span></span></h2>
+    <p class="promise">One short email a week. One minute to read<br>and be inspired.</p>
+    <a class="btn" href="https://perpetual-engine.kit.com/47f9180ef6"><span>Fuel my curiosity!</span></a>
+    </div>
+
+
+<div class="sister"><div><div class="s-head">Fuel for the curious dancer</div>One short email a week. One minute to read and be inspired.<br><a class="btn" href="https://perpetual-engine.kit.com/47f9180ef6">Fuel my curiosity!</a></div></div>
+<table class="navbox" style="width:100%"><tr><th colspan="2">The Practice Journal</th></tr><tr><td><a href="../the-floor-becomes-the-ceiling/">&larr; The Floor Becomes the Ceiling</a></td><td style="text-align:right"></td></tr></table>
+<div class="catbox"><b>Categories:</b> <a href="#">The Practice Journal</a> &middot; <a href="#">Contact Improvisation</a> &middot; <a href="#">Koh Phangan</a></div>
+</main>
+</div>
+<div class="footer">Eric Alessi &middot; Contact Improvisation &middot; Koh Phangan, Thailand &middot; Wikipedia-design preview generated October 2026 from the live pages. Text is identical to the live site; only the layout changed.</div>
+</body>
+</html>

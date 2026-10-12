@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Build ericalessi.com in the Wikipedia-tables design.
 
-Sources (edit these, never the generated pages):
+Source (edit this, never the generated page):
   _src/canon.html            the Canon entries, <details class="entry"> markup per shelf
-  _src/home.html             the old homepage (lab text, student quotes, newsletter sample)
-  _src/journal/<slug>.html   one file per Practice Journal entry
 
-Outputs (generated, overwritten on every run):
-  index.html, contact-improvisation-canon/index.html, journal/<slug>/index.html
+Output (generated, overwritten on every run):
+  contact-improvisation-canon/index.html
+
+The homepage and the journal entries are NOT generated; they keep the site's own ink-and-paper design.
 
 Run from the repo root:  python3 _src/build_site.py
 """
@@ -327,7 +327,6 @@ def build_home(total):
 
 
 if __name__ == '__main__':
+    # Only the Canon is generated. The homepage and journal keep the site's own design (index.html, journal/*/index.html are hand-made).
     total = build_canon()
-    build_journal()
-    build_home(total)
-    print('built: canon %d works, %d journal entries, home' % (total, len(JOURNAL)))
+    print('built: canon %d works' % total)

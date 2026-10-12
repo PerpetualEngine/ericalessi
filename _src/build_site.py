@@ -212,7 +212,6 @@ def build_canon():
         '<tr><th>Free to read or watch</th><td>%d</td></tr><tr><th>Sections</th><td>9</td></tr><tr><th>Languages</th><td>7</td></tr><tr><th>Started</th><td>September 2026</td></tr></table></div>' % (total, free),
         '<p class="lead">All Contact Improvisation resources in one place: videos, lectures, audio, books and essays on the discipline, gathered in nine sections and annotated. Where a free, legal source exists, it is linked.</p>',
         '<p>The undertaking is deliberately big: to gather every interesting piece of work on Contact Improvisation and share it here, for the benefit of the global CI community. If something essential is missing, <a href="mailto:eric@perpetualnurture.com?subject=Canon%20suggestion">write to me</a>.</p>',
-        '<div class="ambox">One clarification on the paid entries: today I earn nothing from anything listed here. No commissions, and no association with any of the authors cited. I am sharing what I find interesting. If that ever changes, for example if book links become affiliate links, I will say so here first.</div>']
     toc = []
     for sh in shelves:
         toc.append('<li><a href="#shelf%d"><span class="tocnum">%d</span> %s</a></li>' % (sh['n'], sh['n'], sh['title']))

@@ -47,6 +47,7 @@ h1{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:2rem;
 h2{font-family:"Linux Libertine",Georgia,"Times New Roman",serif;font-size:1.5rem;font-weight:400;border-bottom:1px solid var(--rule);margin:1.6em 0 .4em;padding-bottom:.15em;line-height:1.3}
 h3{font-size:1.05rem;font-weight:700;margin:1.2em 0 .3em}
 main p{margin:.5em 0}
+.lead{font-size:16.5px;line-height:1.55;margin:.6em 0 1em}
 .wdesc{color:var(--muted);margin:.2em 0 1em}
 .wmeta{color:var(--muted);font-weight:400}
 .wdet{color:var(--muted);font-size:13px}
@@ -209,7 +210,7 @@ def build_canon():
         '<div class="infobox"><div class="ib-title">The Contact Improvisation Canon</div><table>'
         '<tr><th>Curator</th><td><a href="/">Eric Alessi</a></td></tr><tr><th>Subject</th><td>Contact Improvisation</td></tr><tr><th>Works</th><td>%d</td></tr>'
         '<tr><th>Free to read or watch</th><td>%d</td></tr><tr><th>Shelves</th><td>9</td></tr><tr><th>Languages</th><td>7</td></tr><tr><th>Started</th><td>September 2026</td></tr></table></div>' % (total, free),
-        '<p>A directory I keep growing: the <a href="#shelf1">texts</a> and <a href="#shelf7">films</a> that shape my practice and my teaching, on nine shelves. Each entry says what the work argues and when to reach for it. Where a work has a free, legal home, the entry links to it; sources are being added shelf by shelf. Where a work is for sale, buy it.</p>',
+        '<p class="lead">All Contact Improvisation resources in one place: videos, lectures, audio, books and essays on the discipline, gathered on nine shelves and annotated. Where a free, legal source exists, it is linked.</p>',
         '<p>The undertaking is deliberately big: to gather every interesting piece of work on Contact Improvisation and share it here, for the benefit of the global CI community. If something essential is missing, <a href="mailto:eric@perpetualnurture.com?subject=Canon%20suggestion">write to me</a>.</p>',
         '<div class="ambox">One clarification on the paid entries: today I earn nothing from anything listed here. No commissions, and no association with any of the authors cited. I am sharing what I find interesting. If that ever changes, for example if book links become affiliate links, I will say so here first.</div>']
     toc = []

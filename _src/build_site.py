@@ -101,7 +101,7 @@ def strip_tags(s):
 
 
 def nav(cur):
-    items = [('World Library', '/contact-improvisation-canon/'), ('Classes', '/#curiosilab'), ('Journal', '/#journal'), ('Subscribe', KIT)]
+    items = [('World Library', '/contact-improvisation-canon/'), ('Classes', '/#classes'), ('Subscribe', KIT)]
     return ''.join('<a href="%s"%s>%s</a>' % (u, ' class="cur"' if n == cur else '', n) for n, u in items)
 
 
